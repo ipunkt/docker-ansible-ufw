@@ -17,6 +17,7 @@ ssh and uses ansible to enable the given ports in ufw. Important: Networking
 mode has to be `host` for ansible to use the correct droplet Ip
 
 ## Environment
+HOSTS: comma separated list of ports. Defaults to 111
 PORTS: comma separated list of ports. Defaults to 111
 UFW\_USER: string. Required
 UFW\_PRIVATE\_KEY: string. Required

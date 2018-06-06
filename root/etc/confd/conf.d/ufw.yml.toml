@@ -1,0 +1,5 @@
+te]
+src = "ufw.yml.tmpl"
+dest = "/opt/playbook/ufw.yml"
+keys = [
+]

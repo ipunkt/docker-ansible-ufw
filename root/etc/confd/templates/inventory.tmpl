@@ -1,5 +1,5 @@
 [ufwtarget]
-{{ $nodes := split (getenv "SERVERS") "," }}
+{{ $nodes := split (getenv "HOSTS") "," }}
 {{- range $nodes }}
 {{.}}
 {{- end }}
