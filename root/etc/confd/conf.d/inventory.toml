@@ -1,0 +1,5 @@
+te]
+src = "inventory.tmpl"
+dest = "/opt/playbook/inventory"
+keys = [
+]
