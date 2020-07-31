@@ -21,8 +21,8 @@ mode has to be `host` for ansible to use the correct droplet Ip
 
 ## Environment
 
-HOSTS: comma separated list of ports. Defaults to 111
-PORTS: comma separated list of ports. Defaults to 111
-UFW\_USER: string. Required
-UFW\_PASSWORD: string. sudo password. Required
-UFW\_PRIVATE\_KEY: string. Private Key. Required
+- `HOSTS`: comma separated list of ports. Defaults to 111
+- `PORTS`: comma separated list of ports. Defaults to 111
+- `UFW_USER`: string. Required
+- `UFW_PASSWORD`: string. sudo password. Required
+- `UFW_PRIVATE_KEY`: string. Private Key. Required
