@@ -15,11 +15,11 @@
         comment: "{{ "{{ local_facts.ansible_facts.ansible_hostname }}" }}"
         rule: allow
         proto: any
-        port: {{ "{{ item  }}" }}
+        port: "{{ "{{ item  }}" }}"
         from_ip: "{{ "{{ local_facts.ansible_facts.ansible_default_ipv4.address }}" }}"
       tags: ['ufw']
       when: local_facts.ansible_facts.ansible_default_ipv4 is defined and local_facts.ansible_facts.ansible_default_ipv4.address is defined
-      loop: {{ "{{ (lookup('env', 'PORTS') | default('111')).split(',') }}" }}
+      loop: "{{ "{{ (lookup('env', 'PORTS') | default('111')).split(',') }}" }}"
     - name: Allow traffic to ports from this host (ipv6)
       ufw:
         comment: "{{ "{{ local_facts.ansible_facts.ansible_hostname }}" }} ipv6"
@@ -28,5 +28,5 @@
         port: {{ "{{ item  }}" }}
         from_ip: "{{ "{{ local_facts.ansible_facts.ansible_default_ipv6.address }}" }}"
       when: local_facts.ansible_facts.ansible_default_ipv6 is defined and local_facts.ansible_facts.ansible_default_ipv6.address is defined
-      loop: {{ "{{ (lookup('env', 'PORTS') | default('111')).split(',') }}" }}
+      loop: "{{ "{{ (lookup('env', 'PORTS') | default('111')).split(',') }}" }}"
       tags: ['ufw']
